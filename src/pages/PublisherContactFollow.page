@@ -1,0 +1,29 @@
+<apex:page standardcontroller="Contact" extensions="ContactFollowExtensionController" showHeader="false"  standardStylesheets="false" cache="false" doctype="html-5.0" action="{!init}">
+
+<head>
+    <!-- jquery関連のライブラリ読み込み -->
+    <apex:include pageName="jQueryMobileLibrary"/>
+</head>
+
+<body>
+    <apex:form >
+    <div data-role="page"  >
+        <div data-role="header">
+            <h1>かんたんフォロー</h1>
+            <p>  送信設定時間 ： {!$Setup.BookmarkMailTemplate__c.sendtime__c}</p>
+        </div><!-- /header -->
+        <div data-role="content">
+                <apex:selectRadio value="{!selection}" layout="pageDirection" style="width:100% ;">
+                    <apex:selectOptions value="{!templateSelect}"/>
+                </apex:selectRadio>
+                
+                <apex:pageMessages />
+                
+                <apex:commandButton action="{!reservedsend}" value="設定時間に送信" html-data-role="button" html-data-theme="b" />
+                <apex:commandButton action="{!directsend}" value="すぐに送信" html-data-role="button" html-data-theme="b" />
+            
+        </div>
+    </div>
+    </apex:form>
+</body>
+</apex:page>

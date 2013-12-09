@@ -1,0 +1,9 @@
+<apex:page >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMobile1_1, 'jquery.mobile-1.1.2.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMobile1_1, 'jquery.mobile.sinpledialog.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMobile1_1, 'jquery-1.7.2.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMobile1_1, 'jquery.mobile-1.1.2.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMobile1_1, 'jquery.mobile.sinpledialog2.min.js')}"/>
+</apex:page>
